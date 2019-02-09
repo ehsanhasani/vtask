@@ -13,7 +13,7 @@ export class JobsService {
   getJobs() {
     return this.http.get(this.url)
       .toPromise()
-      .then((res) => console.log(res))
+      .then((res) => res)
       .catch((error) => console.log(error));
   }
 }
