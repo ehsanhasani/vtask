@@ -7,10 +7,11 @@ import { AppComponent } from './app.component';
 import { NavbarModule } from './shared/navbar/navbar.module';
 import { JobsModule } from './jobs/jobs.module';
 import { MayanTombModule } from './mayan-tomb/mayan-tomb.module';
+import { LoadingModule } from './shared/loading/loading.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -18,7 +19,8 @@ import { MayanTombModule } from './mayan-tomb/mayan-tomb.module';
     AppRoutingModule,
     NavbarModule,
     JobsModule,
-    MayanTombModule
+    MayanTombModule,
+    LoadingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
