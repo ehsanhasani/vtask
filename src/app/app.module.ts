@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarModule } from './shared/navbar/navbar.module';
+import { JobsModule } from './jobs/jobs.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { NavbarModule } from './shared/navbar/navbar.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NavbarModule
+    NavbarModule,
+    JobsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
