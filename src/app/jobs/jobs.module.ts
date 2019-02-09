@@ -4,12 +4,14 @@ import { CommonModule } from '@angular/common';
 import { JobsComponent } from './jobs.component';
 import { ListComponent } from './list/list.component';
 import { ListItemComponent } from './list-item/list-item.component';
+import { JobsService } from './jobs.service';
 
 @NgModule({
   declarations: [JobsComponent, ListComponent, ListItemComponent],
   imports: [
     CommonModule
   ],
-  exports: [JobsComponent]
+  exports: [JobsComponent],
+  providers: [JobsService]
 })
 export class JobsModule { }
