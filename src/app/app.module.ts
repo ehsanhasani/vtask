@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarModule } from './shared/navbar/navbar.module';
 import { JobsModule } from './jobs/jobs.module';
+import { MayanTombModule } from './mayan-tomb/mayan-tomb.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { JobsModule } from './jobs/jobs.module';
     BrowserModule,
     AppRoutingModule,
     NavbarModule,
-    JobsModule
+    JobsModule,
+    MayanTombModule
   ],
   providers: [],
   bootstrap: [AppComponent]
