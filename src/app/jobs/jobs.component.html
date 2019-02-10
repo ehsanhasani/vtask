@@ -5,7 +5,7 @@
         </div>
         <div class="col-md-4">
             <!-- jobs search input -->
-            <input (keyup.enter)="onSearch(keyword.value)" #keyword type="text" 
+            <input (keyup.enter)="onSearch()" [(ngModel)]="keyword" type="text" 
                 class="form-control input-search" placeholder="search...">
         </div>
     </div>

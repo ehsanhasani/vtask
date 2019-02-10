@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { JobsComponent } from './jobs.component';
 import { ListComponent } from './list/list.component';
@@ -10,7 +11,8 @@ import { ListNotfoundComponent } from './list-notfound/list-notfound.component';
 @NgModule({
   declarations: [JobsComponent, ListComponent, ListItemComponent, ListNotfoundComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   exports: [JobsComponent],
   providers: [JobsService]

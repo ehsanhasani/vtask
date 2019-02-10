@@ -14,6 +14,8 @@ import { LoadingService } from '../shared/loading/loading.service';
 export class JobsComponent implements OnInit {
   // array of job
   jobs: Job[];
+  // keyword string search input
+  keyword: string;
   constructor(private jobsService: JobsService,
               // for show loading when get jobs
               private loadingService: LoadingService,
@@ -23,10 +25,15 @@ export class JobsComponent implements OnInit {
               private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
+    this.jobs = [];
     // subscribe active params
     this.activatedRoute.queryParams.subscribe((params: Params) => {
       // call for get first init component
       this.getJobs(params);
+      // check query params in url or not
+      if ('query' in params) {
+        this.keyword = params.query;
+      }
     });
   }
 
@@ -45,7 +52,7 @@ export class JobsComponent implements OnInit {
   // search function
   onSearch(keyword: string) {
     // if keyword has word put query params on url
-    if (keyword !== '') {
+    if (this.keyword !== '') {
       this.router.navigate(['./'], {queryParams: {query: keyword}});
     } else {
       this.router.navigate(['./']);
