@@ -11,6 +11,12 @@
     </div>
     <app-jobs-list>
         <!-- show item of job -->
-        <app-list-item *ngFor="let job of jobs;let i = index" [job]="job"></app-list-item>
+        <ng-container *ngIf="jobs.length != 0;else jobNotFound">
+            <app-list-item *ngFor="let job of jobs;let i = index" [job]="job"></app-list-item>
+        </ng-container>
+        <ng-template #jobNotFound>
+            <app-list-notfound></app-list-notfound>
+        </ng-template>
+        
     </app-jobs-list>
 </div>
