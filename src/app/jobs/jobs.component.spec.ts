@@ -5,6 +5,7 @@ import { JobsService } from './jobs.service';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ListComponent } from './list/list.component';
 import { ListItemComponent } from './list-item/list-item.component';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('JobsComponent', () => {
   let component: JobsComponent;
@@ -15,7 +16,7 @@ describe('JobsComponent', () => {
     TestBed.configureTestingModule({
       declarations: [ JobsComponent, ListComponent, ListItemComponent ],
       providers: [ JobsService ],
-      imports: [HttpClientTestingModule]
+      imports: [HttpClientTestingModule, RouterTestingModule]
     })
     .compileComponents();
   }));

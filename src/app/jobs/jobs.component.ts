@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 import { JobsService } from './jobs.service';
 import { Job } from './job';
 import { LoadingService } from '../shared/loading/loading.service';
+
 
 @Component({
   selector: 'app-jobs',
@@ -13,7 +16,9 @@ export class JobsComponent implements OnInit {
   jobs: Job[];
   constructor(private jobsService: JobsService,
               // for show loading when get jobs
-              private loadingService: LoadingService) { }
+              private loadingService: LoadingService,
+              // for navigate
+              private router: Router) { }
 
   ngOnInit() {
     // call for get first init component
@@ -30,6 +35,16 @@ export class JobsComponent implements OnInit {
         // hidden loading
         this.loadingService.displayLoader();
       });
+  }
+
+  // search function
+  onSearch(keyword: string) {
+    // if keyword has word put query params on url
+    if (keyword !== '') {
+      this.router.navigate(['./'], {queryParams: {query: keyword}});
+    } else {
+      this.router.navigate(['./']);
+    }
   }
 
 }
