@@ -20,9 +20,10 @@ export class MayanTombComponent implements OnInit {
     this.tombsDimentional = this.mayanTombService
       .create2DTomb(row);
   }
-
+  // calculate number of layzer bob will need it
   calculate() {
-    console.log(this.tombsDimentional);
+    this.mayanTombService
+      .calculate(this.tombsDimentional);
   }
 
 }

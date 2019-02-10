@@ -3,6 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { MayanTombComponent } from './mayan-tomb.component';
 import { TombComponent } from './tomb/tomb.component';
 import { StatueComponent } from './statue/statue.component';
+import { ButtonComponent } from '../shared/button/button.component';
 
 describe('MayanTombComponent', () => {
   let component: MayanTombComponent;
@@ -10,7 +11,7 @@ describe('MayanTombComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MayanTombComponent, TombComponent, StatueComponent ]
+      declarations: [ MayanTombComponent, TombComponent, StatueComponent, ButtonComponent ]
     })
     .compileComponents();
   }));

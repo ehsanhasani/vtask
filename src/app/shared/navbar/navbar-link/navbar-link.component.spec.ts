@@ -8,6 +8,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { MayanTombComponent } from 'src/app/mayan-tomb/mayan-tomb.component';
 import { TombComponent } from 'src/app/mayan-tomb/tomb/tomb.component';
 import { StatueComponent } from 'src/app/mayan-tomb/statue/statue.component';
+import { ButtonComponent } from '../../button/button.component';
 
 describe('NavbarLinkComponent', () => {
   let component: NavbarLinkComponent;
@@ -15,7 +16,7 @@ describe('NavbarLinkComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NavbarLinkComponent, MayanTombComponent, TombComponent, StatueComponent ],
+      declarations: [ NavbarLinkComponent, MayanTombComponent, TombComponent, StatueComponent, ButtonComponent ],
       imports: [
         RouterTestingModule.withRoutes([
           { path: 'mayan', component: MayanTombComponent }

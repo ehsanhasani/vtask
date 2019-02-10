@@ -40,4 +40,8 @@ export class MayanTombService {
   public calculateRowNumberAverage(rowNumber: number): number {
     return Math.floor(rowNumber / 2);
   }
+  // calculate number of layzer bob will need it
+  public calculate(tombs) {
+    console.log(tombs);
+  }
 }
