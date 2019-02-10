@@ -1,11 +1,15 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
+import { RouterTestingModule } from '@angular/router/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 import { JobsComponent } from './jobs.component';
 import { JobsService } from './jobs.service';
-import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ListComponent } from './list/list.component';
 import { ListItemComponent } from './list-item/list-item.component';
-import { RouterTestingModule } from '@angular/router/testing';
+import { ListNotfoundComponent } from './list-notfound/list-notfound.component';
+
+
 
 describe('JobsComponent', () => {
   let component: JobsComponent;
@@ -14,9 +18,9 @@ describe('JobsComponent', () => {
   beforeEach(async(() => {
 
     TestBed.configureTestingModule({
-      declarations: [ JobsComponent, ListComponent, ListItemComponent ],
+      declarations: [ JobsComponent, ListComponent, ListItemComponent, ListNotfoundComponent ],
       providers: [ JobsService ],
-      imports: [HttpClientTestingModule, RouterTestingModule]
+      imports: [HttpClientTestingModule, RouterTestingModule, FormsModule]
     })
     .compileComponents();
   }));

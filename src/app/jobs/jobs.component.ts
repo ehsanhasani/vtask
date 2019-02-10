@@ -50,10 +50,10 @@ export class JobsComponent implements OnInit {
   }
 
   // search function
-  onSearch(keyword: string) {
+  onSearch() {
     // if keyword has word put query params on url
     if (this.keyword !== '') {
-      this.router.navigate(['./'], {queryParams: {query: keyword}});
+      this.router.navigate(['./'], {queryParams: {query: this.keyword}});
     } else {
       this.router.navigate(['./']);
     }
