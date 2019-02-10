@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute, Params } from '@angular/router';
 
 import { JobsService } from './jobs.service';
 import { Job } from './job';
@@ -18,18 +18,23 @@ export class JobsComponent implements OnInit {
               // for show loading when get jobs
               private loadingService: LoadingService,
               // for navigate
-              private router: Router) { }
+              private router: Router,
+              // for check url active query params
+              private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
-    // call for get first init component
-    this.getJobs();
+    // subscribe active params
+    this.activatedRoute.queryParams.subscribe((params: Params) => {
+      // call for get first init component
+      this.getJobs(params);
+    });
   }
 
   // function for get all jobs from api
-  getJobs() {
+  getJobs(params: Params) {
     // show loading
     this.loadingService.displayLoader();
-    this.jobsService.getJobs()
+    this.jobsService.getJobs(params)
       .then((res: Job[]) => {
         this.jobs = res;
         // hidden loading

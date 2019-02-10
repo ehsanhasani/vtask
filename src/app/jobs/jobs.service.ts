@@ -1,5 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Params } from '@angular/router';
+import { URLSearchParams } from 'url';
+
 import { Job } from './job';
 
 @Injectable({
@@ -11,8 +14,8 @@ export class JobsService {
 
   constructor(private http: HttpClient) { }
 
-  getJobs() {
-    return this.http.get(this.url)
+  getJobs(params: Params) {
+    return this.http.get(this.url, { params: params })
       .toPromise()
       .then((res) => res);
   }
