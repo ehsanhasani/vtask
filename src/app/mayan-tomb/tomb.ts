@@ -7,8 +7,10 @@ export class Tomb {
     private j: number;
     // wheader has statue status
     private statue: boolean;
+    private bobPosition: boolean;
     constructor() {
         this.statue = false;
+        this.bobPosition = false;
     }
     // setter of x
     public setX(x: number) {
@@ -44,10 +46,18 @@ export class Tomb {
     }
     // setter of statue
     public setStatue() {
-        this.statue = true;
+        this.statue = !this.statue;
     }
     // check wheather statue exist in this position
     public hasStatue() {
         return this.statue;
+    }
+    // setter of statue
+    public setbBobPosition() {
+        this.bobPosition = true;
+    }
+    // check wheather statue exist in this position
+    public hasBobPosition() {
+        return this.bobPosition;
     }
 }

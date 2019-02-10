@@ -1,3 +1,4 @@
-<p>
-  statue works!
-</p>
+<div *ngIf="tomb" class="statue">
+    <i *ngIf="tomb.hasBobPosition()" class="material-icons">person</i>
+    <i *ngIf="tomb.hasStatue()" class="material-icons">nature</i>
+</div>

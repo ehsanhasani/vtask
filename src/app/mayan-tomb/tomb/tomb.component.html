@@ -1,1 +1,7 @@
-<app-statue></app-statue>
+<ng-container *ngFor="let tom of tombs">
+    <div class="col-md-12">
+        <ng-container *ngFor="let tomb of tom">
+            <app-statue [tomb]="tomb" (click)="onSetStatue(tomb)"></app-statue>
+        </ng-container>  
+    </div>
+</ng-container>

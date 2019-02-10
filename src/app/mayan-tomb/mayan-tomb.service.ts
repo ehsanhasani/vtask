@@ -25,6 +25,10 @@ export class MayanTombService {
         // set x and y of array
         tomb.setX(middleRowNumber - i);
         tomb.setY(j - middleRowNumber);
+        // check if in middle position is position of Bob
+        if (i === middleRowNumber && j === middleRowNumber) {
+          tomb.setbBobPosition();
+        }
         // push tomb in array of tomb
         this.tombArray[i][j] = tomb;
       }

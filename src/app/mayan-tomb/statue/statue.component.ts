@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-statue',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./statue.component.scss']
 })
 export class StatueComponent implements OnInit {
-
+  @Input() tomb;
   constructor() { }
 
   ngOnInit() {

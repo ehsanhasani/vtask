@@ -1,0 +1,15 @@
+.statue {
+    background-color: lightgray;
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    margin-right: 5px;
+    cursor: pointer;
+    position: relative;
+    i {
+        position: absolute;
+        top: 23%;
+        left: 23%;
+        font-size: 35px;
+    }
+}
