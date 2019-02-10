@@ -21,4 +21,8 @@ export class MayanTombComponent implements OnInit {
       .create2DTomb(row);
   }
 
+  calculate() {
+    console.log(this.tombsDimentional);
+  }
+
 }
