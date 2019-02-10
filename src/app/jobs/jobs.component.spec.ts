@@ -29,4 +29,11 @@ describe('JobsComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should h1 title exists', () => {
+    fixture.detectChanges();
+    const jobElement: HTMLElement = fixture.nativeElement;
+    const h1 = jobElement.querySelector('h1');
+    expect(h1.textContent).toEqual('Jobs');
+  });
 });
