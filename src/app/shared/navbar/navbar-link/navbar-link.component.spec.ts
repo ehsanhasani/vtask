@@ -6,6 +6,8 @@ import { Location, CommonModule } from '@angular/common';
 import { NavbarLinkComponent } from './navbar-link.component';
 import { RouterTestingModule } from '@angular/router/testing';
 import { MayanTombComponent } from 'src/app/mayan-tomb/mayan-tomb.component';
+import { TombComponent } from 'src/app/mayan-tomb/tomb/tomb.component';
+import { StatueComponent } from 'src/app/mayan-tomb/statue/statue.component';
 
 describe('NavbarLinkComponent', () => {
   let component: NavbarLinkComponent;
@@ -13,7 +15,7 @@ describe('NavbarLinkComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NavbarLinkComponent, MayanTombComponent ],
+      declarations: [ NavbarLinkComponent, MayanTombComponent, TombComponent, StatueComponent ],
       imports: [
         RouterTestingModule.withRoutes([
           { path: 'mayan', component: MayanTombComponent }

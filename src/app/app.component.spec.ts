@@ -5,6 +5,8 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { NavbarLinkComponent } from './shared/navbar/navbar-link/navbar-link.component';
 import { NavbarBrandComponent } from './shared/navbar/navbar-brand/navbar-brand.component';
 import { LoadingComponent } from './shared/loading/loading.component';
+import { TombComponent } from './mayan-tomb/tomb/tomb.component';
+import { StatueComponent } from './mayan-tomb/statue/statue.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -17,7 +19,9 @@ describe('AppComponent', () => {
         NavbarComponent,
         NavbarLinkComponent,
         NavbarBrandComponent,
-        LoadingComponent
+        LoadingComponent,
+        TombComponent,
+        StatueComponent
       ],
     }).compileComponents();
   }));
