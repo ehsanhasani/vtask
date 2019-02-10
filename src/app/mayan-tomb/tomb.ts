@@ -5,12 +5,15 @@ export class Tomb {
     // position in array
     private i: number;
     private j: number;
+    // slope of (x, y) from (0, 0)
+    private slope: number;
     // wheader has statue status
     private statue: boolean;
     private bobPosition: boolean;
     constructor() {
         this.statue = false;
         this.bobPosition = false;
+        this.slope = null;
     }
     // setter of x
     public setX(x: number) {
@@ -47,6 +50,11 @@ export class Tomb {
     // setter of statue
     public setStatue() {
         this.statue = !this.statue;
+        if (this.statue) {
+            this.setSlope();
+        } else {
+            this.slope = null;
+        }
     }
     // check wheather statue exist in this position
     public hasStatue() {
@@ -59,5 +67,13 @@ export class Tomb {
     // check wheather statue exist in this position
     public hasBobPosition() {
         return this.bobPosition;
+    }
+    // calculate slope of statue from (0, 0)
+    public setSlope() {
+        this.slope = - this.getY() / - this.getX();
+    }
+    // get slope of statue from (0, 0)
+    public getSlope() {
+        return this.slope;
     }
 }

@@ -1,5 +1,6 @@
 <div *ngIf="tomb" class="statue">
     <i *ngIf="tomb.hasBobPosition()" class="material-icons">person</i>
     <i *ngIf="tomb.hasStatue()" class="material-icons">nature</i>
+    <div class="positionj">({{tomb.getSlope()}})</div>
     <div class="position">({{tomb.getX()}}, {{tomb.getY()}})</div>
 </div>
