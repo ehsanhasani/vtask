@@ -8,6 +8,7 @@ import { NavbarModule } from './shared/navbar/navbar.module';
 import { JobsModule } from './jobs/jobs.module';
 import { MayanTombModule } from './mayan-tomb/mayan-tomb.module';
 import { LoadingModule } from './shared/loading/loading.module';
+import { LoadingService } from './shared/loading/loading.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { LoadingModule } from './shared/loading/loading.module';
     MayanTombModule,
     LoadingModule
   ],
-  providers: [],
+  // loading service add to root project to all project reach to on instance
+  providers: [LoadingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -11,7 +11,7 @@
     overflow: hidden;
     margin-bottom: 0px;
     position: fixed;
-    z-index: 100000000000;
+    z-index: 1000;
     top: 0;
     left: 0;
     right: 0;
@@ -47,6 +47,10 @@
     animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
     -webkit-animation-delay: 1.15s;
     animation-delay: 1.15s; }
+
+.progress-display {
+  display: none;
+}
   
   @-webkit-keyframes indeterminate {
     0% {

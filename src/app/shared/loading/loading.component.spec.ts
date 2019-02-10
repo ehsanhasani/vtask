@@ -22,4 +22,11 @@ describe('LoadingComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should does not show job detail if job does not exist', () => {
+    fixture.detectChanges();
+    const loadingElement: HTMLElement = fixture.nativeElement;
+    const progress = loadingElement.querySelector('.progress');
+    expect(progress).toBeDefined();
+  });
 });
