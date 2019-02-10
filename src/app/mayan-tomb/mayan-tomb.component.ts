@@ -10,6 +10,7 @@ import { Tomb } from './tomb';
 })
 export class MayanTombComponent implements OnInit {
   tombsDimentional: Tomb[][];
+  lazer: number;
   constructor(private mayanTombService: MayanTombService) { }
 
   ngOnInit() {
@@ -22,7 +23,7 @@ export class MayanTombComponent implements OnInit {
   }
   // calculate number of layzer bob will need it
   calculate() {
-    this.mayanTombService
+    this.lazer = this.mayanTombService
       .calculate(this.tombsDimentional);
   }
 

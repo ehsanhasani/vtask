@@ -42,6 +42,36 @@ export class MayanTombService {
   }
   // calculate number of layzer bob will need it
   public calculate(tombs) {
-    console.log(tombs);
+    const statues = this.getStatuePosition(tombs);
+    return this.calculateDuplicate(statues);
+  }
+  // get all position that has statue
+  public getStatuePosition(tombs: Tomb[][]) {
+    const statuePosition: Tomb[] = [];
+    for (const tomb of tombs) {
+      for (const to of tomb) {
+        // push tomb position that its slope is not null
+        if (to.getSlope() !== null) {
+          statuePosition.push(to);
+        }
+      }
+    }
+    return statuePosition;
+  }
+  // calculateDuplicate
+  calculateDuplicate(statues) {
+    let lazerCount = statues.length;
+    let i = 1;
+    for (const statue of statues) {
+      for (let j = i; j < statues.length; j++) {
+        if (!((statue.getX() === statues[j].getX()) && (statue.getY() === statues[j].getY()))) {
+          if ((statue.getSlope() === statues[j].getSlope()) && (Math.sign(statue.getX()) === Math.sign(statues[j].getX()))) {
+            lazerCount--;
+          }
+        }
+      }
+      i++;
+    }
+    return lazerCount;
   }
 }
