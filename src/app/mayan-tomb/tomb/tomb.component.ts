@@ -13,8 +13,10 @@ export class TombComponent implements OnInit {
   ngOnInit() {
   }
   // set statue on tomb
-  onSetStatue(tomb) {
-    this.tombs[tomb.getI()][tomb.getJ()].setStatue();
+  onSetStatue(tomb: Tomb) {
+    if (!tomb.hasBobPosition()) {
+      this.tombs[tomb.getI()][tomb.getJ()].setStatue();
+    }
   }
 
 }
