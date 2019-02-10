@@ -52,7 +52,6 @@ describe('NavbarLinkComponent', () => {
     fixture.debugElement.query(By.css('a')).nativeElement.click();
     fixture.whenStable().then(() => {
       expect(location.path()).toEqual('/mayan');
-      console.log('after expect');
     });
   })));
 });
