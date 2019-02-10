@@ -13,7 +13,6 @@ export class ListItemComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges() {
-    console.log(this.job);
   }
 
 }

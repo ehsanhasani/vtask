@@ -1,4 +1,4 @@
-<div class="item">
+<div *ngIf="job" class="item">
   <h3>{{job.position_title}}</h3>
   <p><i class="material-icons">domain</i>{{job.organization_name}}</p>
   <p><i class="material-icons">event</i>{{job.start_date}} - {{job.end_date}}</p>

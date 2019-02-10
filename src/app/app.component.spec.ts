@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { NavbarLinkComponent } from './shared/navbar/navbar-link/navbar-link.component';
 import { NavbarBrandComponent } from './shared/navbar/navbar-brand/navbar-brand.component';
+import { LoadingComponent } from './shared/loading/loading.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -15,7 +16,8 @@ describe('AppComponent', () => {
         AppComponent,
         NavbarComponent,
         NavbarLinkComponent,
-        NavbarBrandComponent
+        NavbarBrandComponent,
+        LoadingComponent
       ],
     }).compileComponents();
   }));

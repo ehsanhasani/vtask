@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { JobsService } from './jobs.service';
+import { Job } from './job';
 
 @Component({
   selector: 'app-jobs',
@@ -8,7 +9,7 @@ import { JobsService } from './jobs.service';
 })
 export class JobsComponent implements OnInit {
   // array of job
-  jobs: any = [];
+  jobs: Job[];
   constructor(private jobsService: JobsService) { }
 
   ngOnInit() {
@@ -19,7 +20,9 @@ export class JobsComponent implements OnInit {
   // function for get all jobs from api
   getJobs() {
     this.jobsService.getJobs()
-      .then((res) => this.jobs = res);
+      .then((res: Job[]) => {
+        this.jobs = res;
+      });
   }
 
 }

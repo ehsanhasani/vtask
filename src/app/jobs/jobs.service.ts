@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Job } from './job';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +14,6 @@ export class JobsService {
   getJobs() {
     return this.http.get(this.url)
       .toPromise()
-      .then((res) => res)
-      .catch((error) => console.log(error));
+      .then((res) => res);
   }
 }
