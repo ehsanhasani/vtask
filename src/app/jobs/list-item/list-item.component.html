@@ -1,6 +1,6 @@
 <div *ngIf="job" class="item">
   <h3>{{job.position_title}}</h3>
-  <p><i class="material-icons">domain</i>{{job.organization_name}}</p>
-  <p><i class="material-icons">event</i>{{job.start_date}} - {{job.end_date}}</p>
-  <p><i class="material-icons">pin_drop</i><span *ngFor="let location of job.locations">{{location}} </span></p>
+  <p class="domain"><i class="material-icons">domain</i>{{job.organization_name}}</p>
+  <p class="event"><i class="material-icons">event</i>{{job.start_date}} - {{job.end_date}}</p>
+  <p class="pin-drop"><i class="material-icons">pin_drop</i><span *ngFor="let location of job.locations">{{location}} </span></p>
 </div>
