@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { MayanTombService } from './mayan-tomb.service';
+
 @Component({
   selector: 'app-mayan-tomb',
   templateUrl: './mayan-tomb.component.html',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MayanTombComponent implements OnInit {
 
-  constructor() { }
+  constructor(private mayanTombService: MayanTombService) { }
 
   ngOnInit() {
   }
