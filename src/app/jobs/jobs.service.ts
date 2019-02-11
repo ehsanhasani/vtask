@@ -15,7 +15,7 @@ export class JobsService {
   constructor(private http: HttpClient) { }
 
   getJobs(params: Params) {
-    return this.http.get(this.url, { params: params })
+    return this.http.get(this.url, {params})
       .toPromise()
       .then((res) => res);
   }
