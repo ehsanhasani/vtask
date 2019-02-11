@@ -2,10 +2,18 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.1.
 
-## Development requirements
+## Nodejs
 
-Angular requires Node.js version 8.x or 10.x. `https://nodejs.org/dist/v10.15.1/node-v10.15.1.pkg`
+Angular requires Node.js version 8.x or 10.x. [Nodejs](https://nodejs.org/dist/v10.15.1/node-v10.15.1.pkg).
 Install the Angular CLI `npm install -g @angular/cli`
+
+## Angular cli
+
+Install the Angular CLI `npm install -g @angular/cli`
+
+## Install package
+
+Clone the project and in root of project run `npm install`
 
 ## Development server
 
