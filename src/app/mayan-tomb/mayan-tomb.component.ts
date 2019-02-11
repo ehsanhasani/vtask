@@ -11,10 +11,12 @@ import { Tomb } from './tomb';
 export class MayanTombComponent implements OnInit {
   tombsDimentional: Tomb[][];
   lazer: number;
-  constructor(private mayanTombService: MayanTombService) { }
+  constructor(private mayanTombService: MayanTombService) {
+    this.lazer = 0;
+  }
 
   ngOnInit() {
-    this.create2DTomb(7);
+    this.create2DTomb(11);
   }
   // call creat2DTomb from mayan service
   create2DTomb(row: number) {

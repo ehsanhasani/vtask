@@ -1,14 +1,31 @@
 <div class="container-fluid">
-  <div class="container title">
-      <div class="col-md-8">
+  <div class="col-md-12 title">
+      <div class="col-md-12">
           <h1>Mayan tomb</h1>
       </div>
-      <div class="col-md-4 text-right">
-        <app-button [title]="'calculate'" (click)="calculate()"></app-button>
-        {{lazer}}
-      </div>
   </div>
-  <div class="col-md-12 text-center">
+  <div class="col-md-9 text-center">
     <app-tomb [tombs]='tombsDimentional'></app-tomb>
+  </div>
+  <div class="col-md-3 text-right">
+    <div class="col-md-12 help">
+        <i class="material-icons">person</i> position of Bob in tomb
+    </div>
+    <div class="col-md-12 help">
+        <i class="material-icons">nature</i> statue in tomb
+    </div>
+    <div class="col-md-12 help">
+        <i class="material-icons">help</i> click in each position to put statue
+    </div>
+    <div class="col-md-12 lazer-info">
+        <div class="col-md-8 text-left">
+            Number of lazer need
+        </div>
+        <div class="col-md-4 text-right">
+            {{lazer}}
+        </div>
+    </div>
+    <app-button [title]="'calculate number of lazer'" (click)="calculate()"></app-button>
+    
   </div>
 </div>
