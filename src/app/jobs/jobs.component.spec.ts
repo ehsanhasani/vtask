@@ -1,13 +1,17 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed, inject } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
 import { RouterTestingModule } from '@angular/router/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { Router } from '@angular/router';
+import { Location } from '@angular/common';
+import { By } from '@angular/platform-browser';
 
 import { JobsComponent } from './jobs.component';
 import { JobsService } from './jobs.service';
 import { ListComponent } from './list/list.component';
 import { ListItemComponent } from './list-item/list-item.component';
 import { ListNotfoundComponent } from './list-notfound/list-notfound.component';
+import { DebugElement } from '@angular/core';
 
 
 

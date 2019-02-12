@@ -42,7 +42,6 @@ export class JobsComponent implements OnInit {
     // subscribe on loading
     this.loadingService.displayloading.subscribe((data) => {
       this.loading = data;
-      console.log(data);
     });
   }
 
@@ -62,6 +61,7 @@ export class JobsComponent implements OnInit {
   onSearch() {
     // if keyword has word put query params on url
     if (this.keyword !== '') {
+      console.log(this.keyword);
       this.router.navigate(['/jobs'], {queryParams: {query: this.keyword}});
     } else {
       this.router.navigate(['/jobs']);
