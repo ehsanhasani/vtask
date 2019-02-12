@@ -22,4 +22,12 @@ describe('ButtonComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should title work', () => {
+    component.title = 'click';
+    const buttonElement: HTMLElement = fixture.nativeElement;
+    const button = buttonElement.querySelector('button');
+    fixture.detectChanges();
+    expect(button.textContent).toEqual('click');
+  });
 });
