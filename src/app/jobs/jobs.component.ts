@@ -16,13 +16,17 @@ export class JobsComponent implements OnInit {
   jobs: Job[];
   // keyword string search input
   keyword: string;
+  // container of loading status
+  loading: boolean;
   constructor(private jobsService: JobsService,
               // for show loading when get jobs
               private loadingService: LoadingService,
               // for navigate
               private router: Router,
               // for check url active query params
-              private activatedRoute: ActivatedRoute) { }
+              private activatedRoute: ActivatedRoute) {
+                this.loading = true;
+              }
 
   ngOnInit() {
     this.jobs = [];
@@ -34,6 +38,11 @@ export class JobsComponent implements OnInit {
       if ('query' in params) {
         this.keyword = params.query;
       }
+    });
+    // subscribe on loading
+    this.loadingService.displayloading.subscribe((data) => {
+      this.loading = data;
+      console.log(data);
     });
   }
 
